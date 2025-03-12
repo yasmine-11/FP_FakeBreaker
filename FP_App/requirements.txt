@@ -1,0 +1,13 @@
+# CORE APP LIBRARIES
+streamlit==1.37.1
+
+# MACHINE LEARNING & NLP
+torch==2.5.1
+transformers==4.48.2
+nltk==3.9.1
+scikit-learn==1.5.1
+
+# UTILITIES
+pandas==2.2.2
+numpy==1.26.4
+regex==2024.9.11
