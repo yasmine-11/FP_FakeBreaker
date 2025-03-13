@@ -20,7 +20,7 @@ st.title("📰 FakeBreaker")
 st.write("Enter a news article below to check if it's **Fake, Real, or AI-generated**.")
 
 # Load model & tokenizer
-model_path = "/Users/yassu/Desktop/FP_Fake_News/distilbert_fake_news"
+model_path = "yasmine-11/distilbert_fake_news"
 model = DistilBertForSequenceClassification.from_pretrained(model_path)
 tokenizer = DistilBertTokenizer.from_pretrained(model_path)
 model.eval()
