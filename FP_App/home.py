@@ -26,6 +26,7 @@ tokenizer = DistilBertTokenizer.from_pretrained(model_path)
 model.eval()
 
 # Download required NLTK resources
+nltk.download('punkt_tab')
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
