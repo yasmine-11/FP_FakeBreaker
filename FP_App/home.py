@@ -68,17 +68,17 @@ if "user_text" not in st.session_state:
 user_input = st.text_area("Paste your article here:", value=st.session_state.user_text, height=250)
 
 # Button layout
-col1, col2 = st.columns([1, 6]) 
-
-# Analyze button
-with col2:  
-    analyze_button = st.button("Analyze")
+col1, col2 = st.columns([7, 1]) 
 
 # Clear text button
 with col1:
     if st.button("Clear Text"):
         st.session_state.user_text = None  # Reset session state value
         st.rerun()  # Properly clear input field
+
+# Analyze button
+with col2:  
+    analyze_button = st.button("Analyze")
 
 # Analyze button logic
 if analyze_button:
