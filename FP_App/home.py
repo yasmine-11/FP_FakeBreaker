@@ -71,13 +71,13 @@ user_input = st.text_area("Paste your article here:", value=st.session_state.use
 col1, col2 = st.columns([6, 1]) 
 
 # Clear text button
-with col2:
+with col1:
     if st.button("Clear Text"):
         st.session_state.user_text = None  # Reset session state value
         st.rerun()  # Properly clear input field
 
 # Analyze button
-with col1:  
+with col2:  
     analyze_button = st.button("Analyze")
 
 # Analyze button logic
