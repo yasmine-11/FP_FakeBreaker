@@ -11,7 +11,7 @@ st.write("""
     - **AI-generated**
      
     ### 📌 How It Works:
-    1. Paste any news article into the text box.
+    1. Paste the news article into the text box.
     2. Click **Analyze** to check whether it's **Real, Fake, or AI-generated**.
     3. The model, trained on the **WELFake & GPT2-output** datasets, predicts with **97% accuracy**.
 
