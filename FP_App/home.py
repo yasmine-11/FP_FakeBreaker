@@ -27,7 +27,7 @@ model.eval()
 
 # Download required NLTK resources
 nltk.download('punkt_tab')
-nltk.download('punkt')
+# nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
