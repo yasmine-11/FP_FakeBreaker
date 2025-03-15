@@ -92,7 +92,6 @@ analyze_button_style = """
             border: 2px solid white !important;
             font-size: 16px !important;
             font-weight: bold !important;
-            padding: 10px 20px !important;
         }
 
         /* Hover effect for Analyze button */
