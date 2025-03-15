@@ -27,5 +27,5 @@ st.write("""
          
     🚨 **Note:** While the model achieves high accuracy, it **isn't 100% reliable on unseen data.**  
     It was trained on **~70,000 news articles**, which was the scope of this project given time and resource limitations.  
-    Predictions should be used as a **helpful reference**, not an absolute truth!  
+    *Predictions should be used as a **helpful reference**, not an absolute truth!*  
     """)
