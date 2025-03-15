@@ -94,7 +94,7 @@ with col2:
             border: 2px solid white !important;
             font-size: 16px !important;
             font-weight: bold !important;
-            padding: 10px 5px;
+            padding: 10px;
         }
         button:hover {
             background-color: grey !important;
