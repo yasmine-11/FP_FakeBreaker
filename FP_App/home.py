@@ -82,10 +82,10 @@ with col1:
         st.session_state.user_text = None  # Reset session state value
         st.rerun()  # Properly clear input field
 
-# Analyze button (Styled separately)
+# Custom styling for the Analyze button
 with col2:
     with stylable_container(
-        "red_button",  # Custom ID for styling
+        "analyze_button_container",  # Unique ID for styling
         css_styles="""
         button {
             background-color: red !important;
@@ -94,10 +94,11 @@ with col2:
             border: 2px solid white !important;
             font-size: 16px !important;
             font-weight: bold !important;
-            padding: 10px;
+            padding: 8px 20px !important;
+            margin: 4px 0px !important;
         }
         button:hover {
-            background-color: grey !important;
+            background-color: darkred !important;
             border-color: white !important;
         }
         """,
