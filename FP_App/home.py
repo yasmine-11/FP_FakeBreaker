@@ -94,10 +94,9 @@ with col2:
             border: 2px solid white !important;
             font-size: 16px !important;
             font-weight: bold !important;
-            padding: 10px 10px !important;
         }
         button:hover {
-            background-color: darkred !important;
+            background-color: grey !important;
             border-color: white !important;
         }
         """,
