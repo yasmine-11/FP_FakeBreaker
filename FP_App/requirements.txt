@@ -1,5 +1,6 @@
 # CORE APP LIBRARIES
 streamlit==1.37.1
+streamlit-extras==0.6.0
 
 # MACHINE LEARNING & NLP
 torch==2.5.1

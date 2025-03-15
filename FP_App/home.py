@@ -1,5 +1,6 @@
 # Import needed libraries
 import streamlit as st
+from streamlit_extras.stylable_container import stylable_container
 import torch
 import torch.nn.functional as F
 from transformers import DistilBertForSequenceClassification, DistilBertTokenizer
@@ -75,18 +76,18 @@ user_input = st.text_area(
 # Button layout
 col1, col2 = st.columns([7, 1]) 
 
-# Clear text button
+# Clear Text button (default style)
 with col1:
     if st.button("Clear Text", key="clear_button"):
         st.session_state.user_text = None  # Reset session state value
         st.rerun()  # Properly clear input field
 
-# Apply CSS only to the Analyze button using a div wrapper
-st.markdown(
-    """
-    <style>
-        /* Target ONLY the Analyze button using its surrounding div */
-        div.analyze-button-container button {
+# Analyze button (Styled separately)
+with col2:
+    with stylable_container(
+        "red_button",  # Custom ID for styling
+        css_styles="""
+        button {
             background-color: red !important;
             color: white !important;
             border-radius: 8px !important;
@@ -95,22 +96,13 @@ st.markdown(
             font-weight: bold !important;
             padding: 10px 20px !important;
         }
-
-        /* Hover effect */
-        div.analyze-button-container button:hover {
+        button:hover {
             background-color: darkred !important;
             border-color: white !important;
         }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
-# Wrap the Analyze button in a div for targeted styling
-with col2:
-    st.markdown('<div class="analyze-button-container">', unsafe_allow_html=True)
-    analyze_button = st.button("Analyze", key="analyze_button")
-    st.markdown('</div>', unsafe_allow_html=True)
+        """,
+    ):
+        analyze_button = st.button("Analyze", key="analyze_button")
 
 # Analyze button logic
 if analyze_button:
