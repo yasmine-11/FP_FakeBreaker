@@ -77,7 +77,7 @@ col1, col2 = st.columns([7, 1])
 
 # Clear text button
 with col1:
-    if st.button("Clear Text"):
+    if st.button("Clear Text", key="clear_button"):
         st.session_state.user_text = None  # Reset session state value
         st.rerun()  # Properly clear input field
 
