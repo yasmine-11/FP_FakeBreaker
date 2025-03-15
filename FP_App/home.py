@@ -81,9 +81,34 @@ with col1:
         st.session_state.user_text = None  # Reset session state value
         st.rerun()  # Properly clear input field
 
-# Analyze button
-with col2:  
+# Custom CSS for "Analyze" Button
+analyze_button_style = """
+    <style>
+        div.analyze-button-container button {
+            background-color: red !important;
+            color: white !important;
+            border-radius: 8px;
+            border: 2px solid white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+
+        div.analyze-button-container button:hover {
+            background-color: darkred !important;
+            border-color: white;
+        }
+    </style>
+"""
+
+# Apply CSS
+st.markdown(analyze_button_style, unsafe_allow_html=True)
+
+# Analyze Button inside a unique div class
+with col2:
+    st.markdown('<div class="analyze-button-container">', unsafe_allow_html=True)
     analyze_button = st.button("Analyze")
+    st.markdown("</div>", unsafe_allow_html=True)
 
 # Analyze button logic
 if analyze_button:
