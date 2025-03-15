@@ -66,6 +66,7 @@ if "user_text" not in st.session_state:
 
 # Text input
 user_input = st.text_area(
+    "Paste your article here:", 
     value=st.session_state.user_text if "user_text" in st.session_state and st.session_state.user_text else "",
     height=250,
     placeholder="Paste the news article here..."
