@@ -84,10 +84,10 @@ with col1:
 
 # Custom styling for the Analyze button
 with col2:
-    with stylable_container(
+   with stylable_container(
         "analyze_button_container",  # Unique ID for styling
         css_styles="""
-        button {
+        div[data-testid="stButton"] button {
             background-color: red !important;
             color: white !important;
             border-radius: 8px !important;
@@ -96,6 +96,10 @@ with col2:
             font-weight: bold !important;
             padding: 8px 10px !important;
             margin: 1px 0px !important;
+        }
+        div.analyze_button_container button:hover {
+            background-color: darkred !important;
+            border-color: white !important;
         }
         """,
     ):
