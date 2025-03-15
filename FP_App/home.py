@@ -86,16 +86,10 @@ analyze_button_style = """
     <style>
         div.analyze-button-container button {
             background-color: red !important;
-            color: white !important;
-            border-radius: 8px;
-            border: 2px solid white;
-            font-size: 16px;
-            font-weight: bold;
         }
 
         div.analyze-button-container button:hover {
             background-color: darkred !important;
-            border-color: white;
         }
     </style>
 """
