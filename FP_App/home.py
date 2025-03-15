@@ -86,7 +86,7 @@ analyze_button_style = """
     <style>
         /* Target only the second button (Analyze) */
         div.stButton > button:last-child {
-            background-color: lightblue !important;
+            background-color: black !important;
             color: white !important;
             border-radius: 8px !important;
             border: 2px solid white !important;
