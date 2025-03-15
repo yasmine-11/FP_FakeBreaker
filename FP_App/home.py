@@ -84,24 +84,20 @@ with col1:
 
 # Analyze button (Styled separately)
 with col2:
-    # Use stylable container for Analyze button only
     with stylable_container(
-        "analyze_button_container",  # Unique ID for styling
+        "red_button",  # Custom ID for styling
         css_styles="""
-        div.analyze_button_container button {
+        button {
             background-color: red !important;
             color: white !important;
             border-radius: 8px !important;
             border: 2px solid white !important;
             font-size: 16px !important;
             font-weight: bold !important;
-            padding: 10px 20px !important;
-            margin: 5px 0px !important;
+            padding: 10px;
         }
-
-        /* Ensure hover effect works */
-        div.analyze_button_container button:hover {
-            background-color: darkred !important;
+        button:hover {
+            background-color: grey !important;
             border-color: white !important;
         }
         """,
