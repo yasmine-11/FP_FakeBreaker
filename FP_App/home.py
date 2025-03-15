@@ -84,19 +84,20 @@ with col1:
 # Custom CSS for "Analyze" Button
 analyze_button_style = """
     <style>
-        /* Target only the second button (Analyze) */
-        div.stButton > button:last-child {
-            background-color: black !important;
+        /* Target only the button with the "Analyze" text */
+        div[data-testid="stButton"] button {
+            background-color: red !important;
             color: white !important;
             border-radius: 8px !important;
             border: 2px solid white !important;
             font-size: 16px !important;
             font-weight: bold !important;
+            padding: 10px 20px !important;
         }
 
         /* Hover effect for Analyze button */
-        div.stButton > button:last-child:hover {
-            background-color: grey !important;
+        div[data-testid="stButton"] button:hover {
+            background-color: darkred !important;
             border-color: white !important;
         }
     </style>
@@ -107,7 +108,7 @@ st.markdown(analyze_button_style, unsafe_allow_html=True)
 
 # Analyze Button
 with col2:
-    analyze_button = st.button("Analyze")
+    analyze_button = st.button("Analyze", key="analyze_button")
 
 # Analyze button logic
 if analyze_button:
