@@ -97,7 +97,7 @@ with col2:
             padding: 8px 10px !important;
             margin: 1px 0px !important;
         }
-        div.analyze_button_container button:hover {
+        div[data-testid="stButton"] button:hover {
             background-color: darkred !important;
             border-color: white !important;
         }
