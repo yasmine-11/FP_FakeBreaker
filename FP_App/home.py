@@ -76,34 +76,15 @@ user_input = st.text_area(
 # Button layout
 col1, col2 = st.columns([7, 1]) 
 
-# Clear Text button (default style)
+# Clear Text button
 with col1:
     if st.button("Clear Text", key="clear_button"):
         st.session_state.user_text = None  # Reset session state value
         st.rerun()  # Properly clear input field
 
-# Custom styling for the Analyze button
+# Analyse button
 with col2:
-   with stylable_container(
-        "analyze_button_container",  # Unique ID for styling
-        css_styles="""
-        div[data-testid="stButton"] button {
-            background-color: red !important;
-            color: white !important;
-            border-radius: 8px !important;
-            border: 2px solid white !important;
-            font-size: 16px !important;
-            font-weight: bold !important;
-            padding: 8px 10px !important;
-            margin: 1px 0px !important;
-        }
-        div[data-testid="stButton"] button:hover {
-            background-color: darkred !important;
-            border-color: white !important;
-        }
-        """,
-    ):
-        analyze_button = st.button("Analyze", key="analyze_button")
+    analyze_button = st.button("Analyze", key="analyze_button")
 
 # Analyze button logic
 if analyze_button:
