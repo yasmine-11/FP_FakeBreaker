@@ -94,12 +94,8 @@ with col2:
             border: 2px solid white !important;
             font-size: 16px !important;
             font-weight: bold !important;
-            padding: 8px 20px !important;
+            padding: 8px 5px !important;
             margin: 4px 0px !important;
-        }
-        button:hover {
-            background-color: darkred !important;
-            border-color: white !important;
         }
         """,
     ):
