@@ -84,12 +84,21 @@ with col1:
 # Custom CSS for "Analyze" Button
 analyze_button_style = """
     <style>
-        div.analyze-button-container button {
+        /* Target only the second button (Analyze) */
+        div.stButton > button:last-child {
             background-color: red !important;
+            color: white !important;
+            border-radius: 8px !important;
+            border: 2px solid white !important;
+            font-size: 16px !important;
+            font-weight: bold !important;
+            padding: 10px 20px !important;
         }
 
-        div.analyze-button-container button:hover {
+        /* Hover effect for Analyze button */
+        div.stButton > button:last-child:hover {
             background-color: darkred !important;
+            border-color: white !important;
         }
     </style>
 """
@@ -97,11 +106,9 @@ analyze_button_style = """
 # Apply CSS
 st.markdown(analyze_button_style, unsafe_allow_html=True)
 
-# Analyze Button inside a unique div class
+# Analyze Button
 with col2:
-    st.markdown('<div class="analyze-button-container">', unsafe_allow_html=True)
     analyze_button = st.button("Analyze")
-    st.markdown("</div>", unsafe_allow_html=True)
 
 # Analyze button logic
 if analyze_button:
