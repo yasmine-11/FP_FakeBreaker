@@ -91,7 +91,6 @@ analyze_button_style = """
             border: 2px solid white;
             font-size: 16px;
             font-weight: bold;
-            padding: 10px 20px;
         }
 
         div.analyze-button-container button:hover {
