@@ -86,7 +86,7 @@ analyze_button_style = """
     <style>
         /* Target only the second button (Analyze) */
         div.stButton > button:last-child {
-            background-color: red !important;
+            background-color: blue !important;
             color: white !important;
             border-radius: 8px !important;
             border: 2px solid white !important;
@@ -96,7 +96,7 @@ analyze_button_style = """
 
         /* Hover effect for Analyze button */
         div.stButton > button:last-child:hover {
-            background-color: darkred !important;
+            background-color: grey !important;
             border-color: white !important;
         }
     </style>
