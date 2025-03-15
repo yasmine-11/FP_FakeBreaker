@@ -95,7 +95,7 @@ with col2:
             font-size: 16px !important;
             font-weight: bold !important;
             padding: 8px 10px !important;
-            margin: 3px 0px !important;
+            margin: 1px 0px !important;
         }
         """,
     ):
