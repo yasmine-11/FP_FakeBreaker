@@ -65,7 +65,12 @@ if "user_text" not in st.session_state:
     st.session_state.user_text = ""
 
 # Text input
-user_input = st.text_area("Paste your article here:", value=st.session_state.user_text, height=250)
+user_input = st.text_area(
+    "Paste your article here:", 
+    value=st.session_state.user_text if "user_text" in st.session_state and st.session_state.user_text else "",
+    height=250,
+    placeholder="Paste the news article here..."
+)
 
 # Button layout
 col1, col2 = st.columns([7, 1]) 
