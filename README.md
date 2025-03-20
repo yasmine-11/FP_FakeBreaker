@@ -1,4 +1,4 @@
-# FP_Fake_News_App
+# FakeBreaker
 FakeBreaker - StreamLit Web Application
 This application uses a **DistilBERT** model to classify news articles into:
 - **Real** 
